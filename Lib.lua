@@ -2027,7 +2027,6 @@ if player then
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Synapse Z Has Injected!",  -- Notification title
         Text = "Thank you for using Synapse Z, " .. player.Name,  -- Include player name dynamically
-        Icon = "rbxassetid://YOUR_IMAGE_ID"  -- Replace with your custom uploaded image asset ID
     })
     
     -- Wait for 5 seconds before continuing the script (if needed)
