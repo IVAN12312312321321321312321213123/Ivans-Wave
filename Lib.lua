@@ -2019,3 +2019,19 @@ function library:AddWindow(title, options)
 end
 
 return library
+
+local player = game.Players.LocalPlayer
+
+-- Ensure that we have a valid player before sending the notification
+if player then
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Synapse Z Has Injected!",  -- Notification title
+        Text = "Thank you for using Synapse Z, " .. player.Name,  -- Include player name dynamically
+        Icon = "rbxassetid://YOUR_IMAGE_ID"  -- Replace with your custom uploaded image asset ID
+    })
+    
+    -- Wait for 5 seconds before continuing the script (if needed)
+    wait(5)
+else
+    warn("LocalPlayer is not available")
+end
